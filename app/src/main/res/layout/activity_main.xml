@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dhimandasgupta.kotlincal.MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="16dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/first_number_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Enter First Number"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/second_number_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Second Number"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_number_edit_text" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/add_button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="+"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/second_number_edit_text"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/sub_button"
+        android:layout_marginRight="8dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/sub_button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="-"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/second_number_edit_text"
+        app:layout_constraintRight_toLeftOf="@+id/mul_button"
+        android:layout_marginRight="8dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/mul_button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="*"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/second_number_edit_text"
+        app:layout_constraintRight_toLeftOf="@+id/div_button"
+        android:layout_marginRight="8dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/div_button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="/"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/second_number_edit_text"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:id="@+id/result_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        tools:text="Result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/add_button" />
+</android.support.constraint.ConstraintLayout>
